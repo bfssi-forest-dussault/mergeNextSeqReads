@@ -43,8 +43,8 @@ def group_samples(sample_dir: Path) -> dict:
 
 def verify_merge_dict(merge_dict: dict):
     for sample_id, reads in merge_dict.items():
-        assert len(reads['fwd'] == 4)
-        assert len(reads['rev'] == 4)
+        assert len(reads['fwd']) == 4
+        assert len(reads['rev']) == 4
 
 
 @click.command(help="Given and input directory containing .fastq.gz files produced by a NextSeq, will merge across all "
